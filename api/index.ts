@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/webhooks', webhookRouter);
 
 // Manual trigger endpoint for reminders (use Vercel Cron to call this)
-app.post('/trigger-reminders', async (_req: Request, res: Response) => {
+app.get('/trigger-reminders', async (_req: Request, res: Response) => {
   try {
     await reminderService.sendDailyReminders();
     res.json({ status: 'Reminders triggered successfully' });
