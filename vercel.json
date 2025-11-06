@@ -8,7 +8,7 @@
   "crons": [
     {
       "path": "/trigger-reminders",
-      "schedule": "35 16 * * *"
+      "schedule": "0 9 * * *"
     }
   ]
 }
